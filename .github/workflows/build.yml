@@ -147,19 +147,17 @@ jobs:
             libvulkan-dev \
             glslang-tools \
             libomp-dev \
-            libboost-program-options1.74-dev \
-            libboost-program-options1.74.0 \
+            libboost-program-options-dev \
             libspdlog-dev
 
       - name: Build Video2X
         run: |
           cmake -G Ninja -B build -S . \
             -DVIDEO2X_USE_EXTERNAL_NCNN=OFF \
-            -DNCNN_BUILD_SHARED_LIBS=ON \
-            -DCMAKE_CXX_COMPILER=clang++ \
+            -DVIDEO2X_USE_EXTERNAL_SPDLOG=OFF \
+            -DCMAKE_CXX_COMPILER=g++ \
             -DCMAKE_BUILD_TYPE=Release \
-            -DNCNN_AVX512=OFF \
-            -DCMAKE_INSTALL_PREFIX=AppDir/usr
+            -DCMAKE_INSTALL_PREFIX=video2x-linux-ubuntu-amd64/usr
           cmake --build build --config Release --target install --parallel
 
       - name: Build AppImage
