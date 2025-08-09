@@ -147,8 +147,8 @@ jobs:
             libvulkan-dev \
             glslang-tools \
             libomp-dev \
-            libboost-program-options-dev \
-            libboost-program-options \
+            libboost-program-options1.74.0-dev \
+            libboost-program-options1.74.0 \
             libspdlog-dev
 
       - name: Build Video2X
