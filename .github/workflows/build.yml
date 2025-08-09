@@ -133,6 +133,9 @@ jobs:
         run: |
           git submodule update --init --recursive
           sudo apt-get update
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository -y ppa:ubuntuhandbook1/ffmpeg7
+          sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             build-essential cmake clang pkg-config ninja-build curl file fuse \
             libavcodec-dev \
@@ -144,8 +147,8 @@ jobs:
             libvulkan-dev \
             glslang-tools \
             libomp-dev \
-            libboost-program-options1.83-dev \
-            libboost-program-options1.83.0 \
+            libboost-program-options-dev \
+            libboost-program-options \
             libspdlog-dev
 
       - name: Build Video2X
