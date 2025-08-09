@@ -147,7 +147,7 @@ jobs:
             libvulkan-dev \
             glslang-tools \
             libomp-dev \
-            libboost-program-options1.74.0-dev \
+            libboost-program-options1.74-dev \
             libboost-program-options1.74.0 \
             libspdlog-dev
 
