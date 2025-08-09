@@ -1,5 +1,6 @@
 #include "libvideo2x.h"
 #include <libavcodec/avcodec.h>
+#include <thread>
 
 extern "C" {
 #include <libavutil/avutil.h>
