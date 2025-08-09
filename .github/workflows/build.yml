@@ -137,7 +137,7 @@ jobs:
           sudo add-apt-repository -y ppa:ubuntuhandbook1/ffmpeg7
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            build-essential cmake clang pkg-config ninja-build curl file fuse \
+            build-essential cmake clang ninja-build curl file fuse \
             libavcodec-dev \
             libavdevice-dev \
             libavfilter-dev \
